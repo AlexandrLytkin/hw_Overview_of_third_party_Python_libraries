@@ -1,10 +1,17 @@
-def test_requests():  # pip3 install requests
+def test_requests():  # pip3 install requests Позволяет работать с HTTP-запросами
     import requests
     result = requests.get("https://randomuser.me/api/")
-    print(result)  # узнать коды состояний
+    print(result)
     print(result.url)
     response = result.text
     print(response)
+    print('*' * 30)
+    res = requests.get('https://github.com')
+    print(res)  # узнать коды состояний
+    # print(res.content)  # информацию в виде байтов
+    # print(res.text)  # информацию в виде строк классический JSON-текст
+    print(res.headers)  # Заголовки ответа можно узнать к примеру дату запроса
+    pass
 
 
 def test_pandas():  # Инструмен для анализа обработки данных, напоминает эксэль
@@ -121,7 +128,7 @@ def test_pillow():  # pip3 install pillow Инструмент для работ
     # img.show()
 
 
-# test_requests()
+test_requests()
 # test_pandas()
 # test_matplotlib()
 # test_matplotlib()
